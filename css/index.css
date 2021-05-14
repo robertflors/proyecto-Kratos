@@ -39,11 +39,12 @@ header#contenedor {
     letter-spacing: 2px; }
   header#contenedor .navbar--transparente {
     background-color: transparent;
-    padding-left: 5%;
-    padding-top: 3%; }
+    margin: 0 auto; }
   header#contenedor .navbar--azul {
     background-color: rgba(22, 41, 84, 0.9);
     padding-top: 0px; }
+  header#contenedor nav#menu div#navbarSupportedContent ul {
+    margin: 0 auto; }
   header#contenedor nav#menu a.homeNavbar__link {
     color: #FFFFFF;
     font-size: 16px;
@@ -278,14 +279,6 @@ header#header__servicios nav.servicios__navbar--blanco {
     height: auto; }
   header#header__servicios nav.servicios__navbar--blanco a.navbar-brand:hover {
     border: none; }
-  header#header__servicios nav.servicios__navbar--blanco a.serviciosNavbar__link {
-    color: #162954;
-    font-family: "Roboto", sans-serif; }
-  header#header__servicios nav.servicios__navbar--blanco a.serviciosNavbar__link:hover {
-    color: #D5BA4F;
-    border-bottom: 2px solid;
-    padding-top: 3px;
-    padding-bottom: 3px; }
   header#header__servicios nav.servicios__navbar--blanco .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(213, 186, 79, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
   header#header__servicios nav.servicios__navbar--blanco .custom-toggler.navbar-toggler {
@@ -296,6 +289,14 @@ header#header__servicios nav.servicios__navbar--blanco {
     margin-left: 10%; }
     header#header__servicios nav.servicios__navbar--blanco ul#serviciosNavbar__lista li {
       margin: 0 3% 0 3%; }
+      header#header__servicios nav.servicios__navbar--blanco ul#serviciosNavbar__lista li a.serviciosNavbar__link {
+        color: #162954;
+        font-family: "Roboto", sans-serif; }
+      header#header__servicios nav.servicios__navbar--blanco ul#serviciosNavbar__lista li a.serviciosNavbar__link:hover {
+        color: #D5BA4F;
+        border-bottom: 2px solid;
+        padding-top: 3px;
+        padding-bottom: 3px; }
     header#header__servicios nav.servicios__navbar--blanco ul#serviciosNavbar__lista li#li__servicios a#enlaceHome {
       outline: none; }
 
@@ -306,7 +307,9 @@ header#header__servicios nav.servicios__navbar--blanco {
 @media (max-width: 992px) {
   header#header__servicios nav.servicios__navbar--blanco a.navbar-brand img#serviciosNavbar__logo {
     width: 200px;
-    height: auto; } }
+    height: auto; }
+  header#header__servicios nav.servicios__navbar--blanco div#navbarSupportedContent ul {
+    margin: 0 auto; } }
 
 @media (max-width: 325px) {
   header#header__servicios nav.servicios__navbar--blanco a.navbar-brand img#serviciosNavbar__logo {
@@ -350,21 +353,26 @@ main#main__servicios {
       text-decoration: none;
       color: #FFFFFF; }
 
+@media (max-width: 993px) {
+  main#main__servicios div#contenedorTitulos h2.h2__servicios img.img__servicios {
+    width: 35px;
+    height: auto; } }
+
 @media (max-width: 600px) {
   main#main__servicios div#contenedorTitulos h1.h1__servicios {
     font-size: 28px;
     margin-top: 15%; }
   main#main__servicios div#contenedorTitulos h2.h2__servicios {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 30px; }
   main#main__servicios h3.h3__servicios {
-    font-size: 18px; }
+    font-size: 17px; }
   main#main__servicios p.p__servicios {
-    font-size: 14px; } }
+    font-size: 13px; } }
 
 @media (max-width: 337px) {
   main#main__servicios div#contenedorTitulos h1.h1__servicios {
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 25%; } }
 
 footer#contacto__servicios {
@@ -382,19 +390,38 @@ footer#contacto__servicios {
     footer#contacto__servicios div#footer__contenedorInfo div#redes {
       display: flex;
       flex-direction: column; }
-      footer#contacto__servicios div#footer__contenedorInfo div#redes a {
+      footer#contacto__servicios div#footer__contenedorInfo div#redes a.serviciosFooter__a {
+        font-size: 16px;
         text-decoration: none;
-        color: #162954; }
-        footer#contacto__servicios div#footer__contenedorInfo div#redes a img {
-          margin-right: 9px; }
+        color: #162954;
+        margin-bottom: 2%; }
+        footer#contacto__servicios div#footer__contenedorInfo div#redes a.serviciosFooter__a img.serviciosFooter__img {
+          margin-right: 10px; }
     footer#contacto__servicios div#footer__contenedorInfo div#info {
-      font-size: 18px; }
+      font-size: 16px; }
+
+@media (max-width: 767px) {
+  footer#contacto__servicios {
+    position: static;
+    background-image: url(../img/congreso2.jpg);
+    background-size: cover; }
+    footer#contacto__servicios img#serviciosFooter__imgFondo {
+      display: none; }
+    footer#contacto__servicios div#footer__contenedorInfo {
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
+      font-size: 14px;
+      margin-top: 2%; }
+      footer#contacto__servicios div#footer__contenedorInfo div#redes a.serviciosFooter__a {
+        font-size: 14px; } }
 
 @media (max-width: 450px) {
-  footer#contacto__servicios a {
-    font-size: 12px; }
-  footer#contacto__servicios div#info p {
-    font-size: 14px; } }
+  footer#contacto__servicios div#footer__contenedorInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: center; } }
 
 @media (max-width: 337px) {
   footer#contacto__servicios div#footer__contenedorInfo {

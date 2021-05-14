@@ -48,7 +48,6 @@ $mermaid: "Mermaid";
 
             a#seccionServicios__link{
                 font-size: 14px;
-                // padding-right: 10px;
             }
 
         }
@@ -82,8 +81,9 @@ header#contenedor {
     // -------------------NAVBAR----------------------
     .navbar--transparente {
         background-color: transparent;
-        padding-left: 5%;
-        padding-top: 3%;
+        margin: 0 auto;
+        // padding-left: 5%;
+        // padding-top: 3%;
     }
 
     .navbar--azul {
@@ -92,6 +92,11 @@ header#contenedor {
     }
 
     nav#menu{
+        div#navbarSupportedContent{
+            ul{
+                margin: 0 auto;
+            }
+        }
         a.homeNavbar__link{
             color: $blanco;
             font-size: 16px;
@@ -493,20 +498,8 @@ header#header__servicios {
 
         a.navbar-brand:hover {
             border: none;
-        }
-
-        a.serviciosNavbar__link{
-            color: #162954;
-            font-family: $roboto;
-        }
-
-        a.serviciosNavbar__link:hover {
-            color: #D5BA4F;
-            border-bottom: 2px solid;
-            padding-top: 3px;
-            padding-bottom: 3px;
-        }
-
+        }    
+        
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(213, 186, 79, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
@@ -520,8 +513,19 @@ header#header__servicios {
             justify-content: center;
             margin-left: 10%;
 
-            li {
-                margin: 0 3% 0 3%;                
+            li{
+                margin: 0 3% 0 3%;
+                a.serviciosNavbar__link{
+                    color: #162954;
+                    font-family: $roboto;
+                }
+        
+                a.serviciosNavbar__link:hover {
+                    color: #D5BA4F;
+                    border-bottom: 2px solid;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                }               
             }
 
             li#li__servicios{
@@ -553,6 +557,11 @@ header#header__servicios {
                 img#serviciosNavbar__logo {
                     width: 200px;
                     height: auto;
+                }
+            }
+            div#navbarSupportedContent{
+                ul{
+                    margin: 0 auto;
                 }
             }
         }
@@ -633,6 +642,20 @@ main#main__servicios {
 }
 
 // responsive main
+@media (max-width: 993px){
+    main#main__servicios{
+        div#contenedorTitulos{
+            h2.h2__servicios{
+                img.img__servicios{
+                    width: 35px;
+                    height: auto;
+                }
+            }
+
+        }
+           
+    }
+}
 @media (max-width: 600px) {
     main#main__servicios {
         div#contenedorTitulos {
@@ -642,17 +665,17 @@ main#main__servicios {
             }
 
             h2.h2__servicios {
-                font-size: 20px;
+                font-size: 18px;
                 margin-bottom: 30px;
             }
         }
 
         h3.h3__servicios {
-            font-size: 18px;
+            font-size: 17px;
         }
 
         p.p__servicios {
-            font-size: 14px;
+            font-size: 13px;
         }
     }
 }
@@ -661,7 +684,7 @@ main#main__servicios {
     main#main__servicios {
         div#contenedorTitulos {
             h1.h1__servicios {
-                font-size: 20px;
+                font-size: 22px;
                 margin-top: 25%;
             }
         }
@@ -687,33 +710,62 @@ footer#contacto__servicios {
             display: flex;
             flex-direction: column;
 
-            a {
+            a.serviciosFooter__a{
+                font-size: 16px;
                 text-decoration: none;
                 color: $azulMarino;
+                margin-bottom: 2%;
 
-                img {
-                    margin-right: 9px;
+                img.serviciosFooter__img{
+                    margin-right: 10px;
                 }
             }
         }
 
         div#info {
-            font-size: 18px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    footer#contacto__servicios {
+        position: static;
+        background-image: url(../img/congreso2.jpg);
+        background-size: cover;
+
+        img#serviciosFooter__imgFondo {
+            display: none;
+        }
+
+        div#footer__contenedorInfo {
+            // display: flex;
+            // flex-direction: column;
+            position: static;
+            top: auto;
+            left: auto;
+            transform: none;
+            font-size: 14px;
+            margin-top: 2%;
+
+            div#redes {
+                a.serviciosFooter__a{
+                    font-size: 14px;
+                }
+                
+            }
         }
     }
 }
 
 @media (max-width: 450px) {
     footer#contacto__servicios {
-        a {
-            font-size: 12px;
-        }
-
-        div#info {
-            p {
-                font-size: 14px;
-            }
-        }
+        div#footer__contenedorInfo {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }       
     }
 }
 

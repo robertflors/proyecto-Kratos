@@ -48,3 +48,11 @@ $(".navbar-toggler").click(function () {
 $(".nav-link").click(function () { 
     $("#navbarSupportedContent").hide("fast");   
 });
+
+let ancho = $(window).width();
+console.log(ancho);
+if (ancho > 1500) {
+    animacionesPantallasGrandes();    
+} else {
+    animacionesPantallasPequeñas();        
+}
