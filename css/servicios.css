@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Liberation Serif';
+    src: url('../font/LiberationSerif-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Liberation Serif Bold';
+    src: url('../font/LiberationSerif-Bold.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    font-family: "Liberation Serif";
+    color: #162954;
+
+}
+ /* responsive para el tamaño de las letras de todo el index para pantallas pequeñas */
+@media(max-width: 500px) {
+    main p{
+        font-size: 15px;
+    }
+}
+
+/* ___________________________________________________________________HEADER____________________________________________________________________________________________________ */
+/* ----------------------NAVBAR----------------------- */
+nav.servicios__navbar--blanco{
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 2%;
+}
+nav.navbar--blanco a{
+    color: #162954;
+    font-family: "Liberation Serif Bold";
+}
+nav.navbar--blanco a:hover{
+    color: #D5BA4F;
+    border-bottom: 2px solid;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+nav.navbar--blanco a#enlaceServicios{
+    color: #D5BA4F;
+    border-bottom: 2px solid;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+nav.navbar--blanco a.navbar-brand:hover, nav.navbar--blanco a.navbar-brand:hover{
+    border: none;
+}
+
+nav.navbar--blanco a.navbar-brand img{
+    width: 307px;
+    height: auto;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(213, 186, 79, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgba(213, 186, 79, 0.5);
+}
+
+ul#navbar__lista {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+}
+li {
+    margin: 0 3% 0 3%;
+}
+
+@media (max-width: 445px){
+    nav.navbar--blanco a.navbar-brand img{
+        width: 250px;
+        height: auto;
+    }
+}
+@media (max-width: 350px){
+    nav.navbar--blanco a.navbar-brand img{
+        width: 230px;
+        height: auto;
+    }
+}
+
+@media (max-width: 325px) {
+    header.contenedor nav img.navbar__logo {
+      width: 165px !important;
+      height: auto; }
+    
+    }
+
+
+/* _______________________________________________________MAIN_______________________________________________________________________________- */
+
+main{
+    margin: 7% 3% 0 3%;
+
+}
+main div.container{
+    text-align: center;
+}
+
+h1{
+    font-size: 38px;
+    font-family: "Liberation Serif Bold";
+    border-bottom: 2px solid;
+    display: inline-block;  
+    margin-top: 6%;  
+}
+
+h2{
+    font-size: 30px;
+    font-family: "Liberation Serif Bold";
+    margin-top: 5%;
+}
+
+h3{
+    font-size: 22px;
+    font-family: "Liberation Serif Bold";
+    margin-top: 3%;
+}
+
+main h2 img{
+    width: 46px;
+    height: auto;
+    margin-right: 1%;
+}
+
+main a{
+    background-color: #162954;
+    padding: 0.5% 8% 0.5% 8%;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+main div#servicios__botonContacto{
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+main a:hover{
+    text-decoration: none;
+    color: white;
+}
+@media (max-width: 600px){
+    main h1{
+        font-size: 28px;
+        margin-top: 15%;
+    }
+    main h2{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    main h3{
+        font-size: 18px;
+    }
+}
+@media (max-width: 337px){
+    main h1{
+        font-size: 20px;
+        margin-top: 25%;
+    }
+}
+@media (max-width: 992px) {
+    header nav#menu a.navbar-brand img.navbar__logo {
+       width: 200px;
+       height: auto;
+    }
+}
+
+@media (max-width: 1195px) {
+    header nav#menu a{
+        font-size: 10px;
+    }
+}
+
+/* _______________________________________________________FOOTER_____________________________________________________________________________ */
+footer{
+    position: relative;
+}
+
+footer div#footer__contenedorInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 4%;
+}
+
+footer div#redes{
+    display: flex;
+    flex-direction: column;
+}
+
+footer div#redes a{
+    text-decoration: none;
+    color: #162954; 
+}
+
+footer div#redes a img{
+    margin-right: 9px;
+}
+
+footer div#info p{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 450px){
+    footer a{
+        font-size: 12px;
+    }
+    footer div#info p{
+        font-size: 14px;
+    }
+}
+@media (max-width: 337px){
+    footer div#footer__contenedorInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
