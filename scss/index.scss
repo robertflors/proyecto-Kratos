@@ -255,8 +255,6 @@ main#main__home {
         flex-direction: column;
         align-items: center;
         position: relative;
-        padding-left: 2%;
-        padding-right: 2%;
 
         img.main__logoTransicion {
             position: absolute;
@@ -306,9 +304,10 @@ main#main__home {
 
     @media (max-width: 993px) {
         section#servicios {
-    
+
             div.servicios__contenedorServicio {
-                margin: 8% 0 8% 0;                
+                margin: 8% auto;
+                width: 80vw;               
 
                 h2.h2__contenedorServicio {
                     margin-bottom: 2%;
